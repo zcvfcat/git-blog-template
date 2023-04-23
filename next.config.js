@@ -1,6 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const { env } = require('process')
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+module.exports = {
+  swcMinify: true,
+  reactStrictMode: env.NODE_ENV !== 'production',
+}
