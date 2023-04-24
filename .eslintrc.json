@@ -1,11 +1,7 @@
 {
   "extends": ["@code-convention/eslint-config-nextjs"],
+  "ignorePatterns": ["next.config.js", "tailwind.config.js", "postcss.config.js"],
   "rules": {
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": true
-      }
-    ]
+    "import/no-extraneous-dependencies": ["off"]
   }
 }

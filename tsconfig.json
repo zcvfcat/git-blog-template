@@ -15,7 +15,11 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": "src",
+    "paths": {
+      "@/*": ["../styles/*"]
+    },
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "postcss.config.js", "tailwind.config.js", "next.config.js"]
 }

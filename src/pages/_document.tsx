@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html lang={cookies.get('lang') ?? 'ko'}>
       <Head />
-      <body>
+      <body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
         <Main />
         <NextScript />
       </body>

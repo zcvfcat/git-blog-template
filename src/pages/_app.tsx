@@ -1,3 +1,5 @@
+import '@/globals.css'
+
 import type { AppContext, AppInitialProps, AppProps } from 'next/app'
 import { setCookiesSingleton } from 'config/cookies.singleton'
 import { CookiesProvider } from 'react-cookie'
@@ -21,9 +23,3 @@ NextApp.getInitialProps = async ({ Component, ctx }: AppContext): Promise<AppIni
   const cookies = setCookiesSingleton(ctx.req?.headers.cookie)
   return { pageProps: { ...pageProps, cookies } }
 }
-
-// NextApp.getInitialProps = async (appContext: AppContext) => {
-//   const appProps = await App.getInitialProps(appContext)
-//   const cookies = setCookiesSingleton(ctx.req?.headers.cookie)
-//   return { ...appProps, cookies }
-// }
